@@ -1,0 +1,10 @@
+Author: Yihong Zhou & Mengwen Li
+The name of our player is “yzhou8mli2”
+
+Our player is written in Java. The runnable jar file is exported from eclipse by first right clicking on the “Player.java” file, then, click “Export”, then, select “Runnable JAR file” under “Java”, then, click “Next>”, then, select “Player” in the “Launch configuration” part, select “Package required libraries into generated JAR” and click “Finish”.
+
+To let our player play against others’, use the following command in command line:
+java -jar Referee.jar “java -jar path-to-our-player” “java -jar path-to-other-player”
+
+Our player interacts with referee following the protocal given in the assignment.
+First, our player sends its name to the referee, then it waits for the player names to be sent be the referee. After it gets the player names, it waits for the game configuration sent by the referee. After it get the game configuration, it detemines who goes first. If it goes first, it will make the first move, if the other player goes first, it will wait until the other player gives its move. After the player reads in the opponent’s move, it will calculate its move using iterative deepening minimax with alpha-beta pruning within the time limitation and pass the move to referee.
